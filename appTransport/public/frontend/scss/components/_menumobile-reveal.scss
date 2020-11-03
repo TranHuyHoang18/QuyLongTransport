@@ -1,0 +1,34 @@
+.uk-offcanvas-page{
+  #m_ham_1{
+    transform: rotate(45deg);
+    margin-top: 13px;
+  }
+  #m_ham_2{
+    transform: rotate(-45deg);
+    margin-top: -7px;
+  }
+  #m_ham_3{
+    opacity: 0;
+  }
+}
+.m_nav_ham{
+  width: 24px;
+  height: 2px;
+  background: #6b6a6f;
+  margin: 5px auto;
+  transition-duration: .3s;
+}
+.m_nav_ham_2_open {
+  transform: rotate(-45deg);
+  margin-top: -7px;
+}
+.m_nav_ham_1_open {
+  transform: rotate(45deg);
+  margin-top: 13px;
+}
+.m_nav_ham_3_open {
+  opacity: 0;
+}
+.btn_mn{
+  text-transform: inherit;
+}

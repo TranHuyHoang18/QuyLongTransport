@@ -1,0 +1,29 @@
+.nav{
+  &__menu{
+    >li{
+      >a{
+        padding: 6px 12px;
+      }
+    }
+    &__item{
+
+    }
+    &__link{
+      font-family: $font-primary-semibold;
+      color: #fff !important;
+      @include fluidx(base(16),base(scale_10(16)),font-size);
+      .nav__menu__item:nth-child(n+2) &{
+        border-top: 1px solid #535252;
+      }
+    }
+  }
+  &__hotline{
+    color: #ff9d04;
+    font-family: $font-primary-bold;
+    @include fluidx(base(25),base(scale_9(25)),font-size);
+  }
+  &__timeline{
+    color: #b7b7b7;
+    @include fluidx(base(16),base(scale_10(16)),font-size);
+  }
+}

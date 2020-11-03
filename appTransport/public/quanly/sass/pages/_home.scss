@@ -1,0 +1,149 @@
+.chart{
+  &__pie{
+
+  }
+  &__table{
+    tr{
+      th{
+        text-transform: inherit;
+      }
+      td{
+
+      }
+      th,td{
+        @include fluidx(base(18),13px,font-size);
+        color: $suva-grey;
+        padding: 6px 12px;
+      }
+    }
+  }
+  &__txt1{
+    @include fluidx(base(18),13px,font-size);
+    color: $suva-grey;
+  }
+  &__item{
+    &__txt{
+      @include fluidx(base(18),13px,font-size);
+      color: $charcoal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &__number{
+      font-family: $font-primary-bold;
+      @include fluidx(base(36.1),18px,font-size);
+      .total_cart &{
+        color: $dark-orange;
+      }
+      .inprogress &{
+        color: $summer-sky;
+      }
+      .success_ship &{
+        color: $caribbean-green;
+      }
+    }
+  }
+}
+.formSearch{
+  &__txt{
+    @include fluidx(base(36),18px,font-size);
+    color: $oxford-blue;
+  }
+  &__input{
+    color: $grey;
+    @include fluidx(base(21),14px,font-size);
+    &::placeholder{
+      color: $grey;
+    }
+  }
+  &__btn{
+    text-transform: inherit;
+    background-color: $oxford-blue;
+    border-color: $oxford-blue;
+    color: #ffffff;
+    font-family: $font-primary-bold;
+    @include fluidx(base(24),14px,font-size);
+  }
+}
+.cardBox{
+  &__tm{
+    padding: 15px 20px;
+  }
+  &__header{
+    @extend .cardBox__tm;
+    &__txt{
+      @include fluidx(base(20.7),14px,font-size);
+      font-family: $font-primary-bold;
+      color: $charcoal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+    }
+    &__input{
+      width: 100px;
+      @include fluidx(base(18),13px,font-size);
+    }
+    &__link{
+      @include fluidx(base(18),13px,font-size);
+    }
+  }
+  &__body{
+    @extend .cardBox__tm;
+    &__table{
+      tbody{
+        tr{
+          background: $white-smoke;
+          &:nth-of-type(2n+1){
+            background: $gains-boro;
+          }
+          &:hover{
+            background: #ffd;
+          }
+        }
+      }
+      tr{
+        th{
+          text-transform: inherit;
+          color: $charcoal;
+          @include fluidx(base(20),14px,font-size);
+          background-color: $nobel;
+          padding: 8px 12px;
+        }
+        td{
+          color: $charcoal;
+          @include fluidx(base(20),14px,font-size);
+          padding: 8px 12px;
+        }
+      }
+      &__link{
+        color: $dark-orange;
+        @include fluidx(base(20),14px,font-size);
+      }
+    }
+    &__item1{
+      border: 1px solid $silver;
+      padding: 6px 12px;
+      &__txt{
+        color: $suva-grey;
+        @include fluidx(base(18),13px,font-size);
+      }
+      &__total{
+        font-family: $font-primary-bold;
+        @include fluidx(base(30),16px,font-size);
+        .order &{
+          color: $lightning-yellow;
+        }
+        .ship &{
+          color: $summer-sky;
+        }
+        .pay &{
+          color: $caribbean-green;
+        }
+        .unpay &{
+          color: $persian-red;
+        }
+      }
+    }
+  }
+}

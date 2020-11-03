@@ -1,0 +1,68 @@
+//=====================================================
+// Custom grid
+//=====================================================
+@mixin uk-grid($i){
+  margin-left: -#{$i}px;
+  >*{
+    padding-left: #{$i}px;
+  }
+  >.uk-grid-margin{
+    margin-top: #{$i}px;
+  }
+}
+$j:0,8,10,30;
+@each $i in $j {
+  .uk-grid-#{$i}-xl{
+    @media (min-width: 1600px) {
+      @include uk-grid($i);
+    }
+  }
+  .uk-grid-#{$i}-l{
+    @media (min-width: 1200px) {
+      @include uk-grid($i);
+    }
+  }
+  .uk-grid-#{$i}-m{
+    @media (min-width: 960px) {
+      @include uk-grid($i);
+    }
+  }
+  .uk-grid-#{$i}-s{
+    @media (min-width: 640px) {
+      @include uk-grid($i);
+    }
+  }
+  .uk-grid-#{$i}{
+    @include uk-grid($i);
+  }
+}
+//=====================================================
+// Responsive font-size, width, height,...
+//=====================================================
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@mixin fluidx($max-size, $min-size, $type, $max-vw: 1200px, $min-vw: 375px, $end: true) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-size);
+  $u4: unit($max-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+
+      @media screen and (min-width: $min-vw) {
+        #{$type}: calc(#{$min-size} + #{strip-unit($max-size - $min-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        #{$type}: $max-size;
+      }
+
+      @if($end){
+        #{$type}: $min-size;
+      }
+
+    }
+  }
+}

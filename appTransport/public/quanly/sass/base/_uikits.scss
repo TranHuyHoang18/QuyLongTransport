@@ -1,0 +1,15 @@
+.uk{
+  &-background{
+    &-oxfordBlue{
+      background-color: $oxford-blue;
+    }
+    &-mySin{
+      background-color: $my-sin !important;
+    }
+  }
+  &-width{
+    &-xmedium{
+      width: 250px;
+    }
+  }
+}

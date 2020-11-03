@@ -1,0 +1,35 @@
+// Fonts families
+$font-primary: 'Myriad Pro Regular',sans-serif;
+$font-primary-bold: 'Myriad Pro Bold',sans-serif;
+
+// Font-size base
+$font-base: 14px !default;
+
+// Color name
+$gains-boro: #E8E8E8;
+$white-smoke: #f2f2f2;
+$silver: #bbbbbb;
+$nobel: #999999;
+$grey: #808080;
+$suva-grey: #8b8b8b;
+$charcoal: #4d4d4d;
+$oxford-blue: #2C393F;
+$black-pearl: #151F23;
+$my-sin: #FBB03B;
+$dark-orange: #ff8000;
+$lightning-yellow: #F7931E;
+$summer-sky: #49A9E1;
+$caribbean-green: #00C677;
+$persian-red: #D23737;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 375px,
+  s: 640px,
+  m: 960px,
+  l: 1200px,
+  xl: 1600px
+) !default;

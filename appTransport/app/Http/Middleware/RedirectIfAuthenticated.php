@@ -18,10 +18,48 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect(RouteServiceProvider::HOME);
+        switch ($guard) {
+            case 'admin':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('admin');
+                }
+                break;
+            case 'qtv':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('qtv');
+                }
+                break;
+            case 'nhanvien':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('nhanvien');
+                }
+                break;
+            case 'quanly':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('quanly');
+                }
+                break;
+            case 'ketoan':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('ketoan');
+                }
+                break;
+            case 'taixe':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('taixe');
+                }
+                break;
+            case 'nvkho':
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('nvkho');
+                }
+                break;
+            default:
+                if (Auth::guard($guard)->check()) {
+                    return redirect('/');
+                }
+                break;
         }
-
         return $next($request);
     }
 }

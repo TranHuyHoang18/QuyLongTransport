@@ -1,0 +1,42 @@
+// Fonts families
+$font-primary: 'Segoe UI',sans-serif;
+$font-primary-light: 'Segoe UI Light',sans-serif;
+$font-primary-bold: 'Segoe UI Bold',sans-serif;
+$font-primary-semibold: 'Segoe UI Semibold',sans-serif;
+//$font-secondary: 'Myriad Pro Regular',sans-serif;
+//$font-secondary-italic: 'Myriad Pro Italic',sans-serif;
+//$font-secondary-semibold: 'Myriad Pro Semibold',sans-serif;
+//$font-secondary-bold: 'Myriad Pro Bold',sans-serif;
+$font-secondary: 'Segoe UI',sans-serif;
+$font-secondary-italic: 'Segoe UI Italic',sans-serif;
+$font-secondary-semibold: 'Segoe UI Semibold',sans-serif;
+$font-secondary-bold: 'Segoe UI Bold',sans-serif;
+
+// Font-size base
+$font-base: 14px !default;
+
+// Color name
+$Lightning_Yellow: #F7931E;
+$White_Smoke: #f8f8f8;
+$Nobel: #999999;
+$Carrot_Orange: #EF7A11;
+$Oxford_Blue: #27343B;
+$Black_Pearl: #181E21;
+$Silver: #B7B7B7;
+$White: #FFFFFF;
+$White_Smoke: #EBEBEB;
+$Dim_Gray: #707070;
+$Grey: #818181;
+$Solitude: #F1F4F6;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  s: 640px,
+  m: 960px,
+  l: 1200px,
+  xl: 1600px
+) !default;

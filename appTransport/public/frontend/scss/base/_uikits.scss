@@ -1,0 +1,33 @@
+.uk{
+  &-background{
+    &-oxfordBlue{
+      background-color: $Oxford_Blue;
+    }
+    &-blackPearl{
+      background-color: $Black_Pearl;
+    }
+    &-Solitude{
+      background-color: $Solitude;
+    }
+    &-WhiteSmoke{
+      background-color: #f8f8f8;
+    }
+  }
+  &-button{
+    &--1{
+      text-transform: inherit;
+      background-color: $Grey;
+      border-color: $Grey;
+      color: $White;
+      &:hover{
+        color: $White;
+      }
+    }
+    &--2{
+      text-transform: inherit;
+      background-image: linear-gradient(260deg, #ff9900 95%, #ff9100 4%);
+      border-color: transparent;
+      color: $White;
+    }
+  }
+}

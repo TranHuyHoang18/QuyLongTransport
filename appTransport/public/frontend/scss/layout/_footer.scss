@@ -1,0 +1,80 @@
+.footer{
+  color: $Silver;
+  &__copyRight{
+    @include fluidx(base(18),base(scale_10(18)),font-size);
+    line-height: 1.2;
+    color: $Silver;
+    font-family: $font-secondary;
+  }
+  &__botTom{
+    padding: 12px 0;
+  }
+  &__itemTop{
+    &:nth-child(n+2){
+      @include fluidx(25px,20px,margin-top);
+    }
+  }
+  &__logoBox{
+
+  }
+  &__captionLogo{
+    padding-bottom: 10px;
+    border-bottom: 1px solid $White;
+    @extend .footer__dc1;
+    color: $Silver;
+    line-height: 1.35;
+    font-family: $font-primary-light;
+  }
+  &__title{
+    @include fluidx(base(20),base(scale_9(20)),font-size);
+    font-family: $font-primary-semibold;
+    color: $White_Smoke;
+    @include fluidx(20px,15px,margin-bottom);
+  }
+  &__list1{
+    @extend .footer__dc1;
+    margin: 0;
+    >li{
+      &:nth-child(n+2){
+        @include fluidx(24px,20px,margin-top);
+      }
+      padding-left: 25px;
+      position: relative;
+      img{
+        position: absolute;
+        top: 4px;
+        left: 0;
+      }
+    }
+  }
+  &__list2{
+    @extend .footer__dc1;
+    margin: 0;
+    >li{
+      margin: 0 !important;
+      border-top: 1px solid $Dim_Gray;
+      >a{
+        display: block;
+        padding: 7px 0px;
+        color: $Silver;
+        line-height: 1.35;
+      }
+    }
+  }
+  &__dc1{
+    @include fluidx(base(17.5),base(scale_10(17.5)),font-size);
+  }
+  &__desc1{
+    margin-bottom: 8px;
+    margin-top: 8px;
+    @extend .footer__dc1;
+    &--lhvc{
+      line-height: 1;
+    }
+  }
+  &__hotline{
+    color: #ffbb00;
+    line-height: 1.2;
+    @include fluidx(base(36),base(scale_8(36)),font-size);
+  }
+}

@@ -2,7 +2,9 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Arr;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -32,7 +34,7 @@ class Handler extends ExceptionHandler
      * @param  \Throwable  $exception
      * @return void
      *
-     * @throws \Throwable
+     * @throws \Exception
      */
     public function report(Throwable $exception)
     {
@@ -51,5 +53,41 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $exception)
     {
         return parent::render($request, $exception);
+    }
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        if($request->expectsJson())
+        {
+            return response()->json(['error'=>'Unauthenticated.'], 401);
+        }
+        $guard = Arr::get($exception->guards(),0);
+        switch ($guard)
+        {
+            case 'admin':
+                $login = 'admin.auth.login';
+                break;
+            case 'qtv':
+                $login = 'qtv.auth.login';
+                break;
+            case 'nhanvien':
+                $login = 'nhanvien.auth.login';
+                break;
+            case 'quanly':
+                $login = 'quanly.auth.login';
+                break;
+            case 'ketoan':
+                $login = 'ketoan.auth.login';
+                break;
+            case 'taixe':
+                $login = 'taixe.auth.login';
+                break;
+            case 'nvkho':
+                $login = 'nvkho.auth.login';
+                break;
+            default:
+                $login='login';
+                break;
+        }
+        return redirect()->guest(route($login));
     }
 }

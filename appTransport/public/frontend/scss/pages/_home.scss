@@ -1,0 +1,440 @@
+.home{
+  &__title{
+    @include fluidx(base(30),base(scale_8(30)),font-size);
+    font-family: $font-primary-bold;
+    color: $Oxford_Blue;
+    .home__block__tracuu &{
+      color: $White;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+      &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 70%;
+        background-color: $Dim_Gray;
+        .home__block__tracuu &{
+          background-color: $White;
+        }
+      }
+    }
+  }
+  &__card{
+    border-radius: 15px;
+    box-shadow: 4px 4px 7px 0 rgba(107, 107, 107, 0.6);
+    &__boxImg{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include media-breakpoint-up('m'){
+        min-height: 210px;
+      }
+    }
+    &__title{
+      font-family: $font-secondary;
+      @include fluidx(base(25.9),base(scale_8(25.9)),font-size);
+      color: $Carrot_Orange;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &__desc{
+      color: $Nobel;
+      font-family: $font-secondary-italic;
+      @include fluidx(base(16),base(scale_10(16)),font-size);
+    }
+    &__dot{
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #999999;
+      .uk-active > &{
+        background-color: #fbb03b;
+      }
+    }
+  }
+  &__block{
+    &__lienhe{
+      &__boxImg{
+        min-width: 50px;
+        min-height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      &__bold{
+        color: $Oxford_Blue;
+        line-height: 0.72;
+        @include fluidx(base(40),base(scale_8(40)),font-size);
+        &--fz1{
+          line-height: 1.2;
+          @include fluidx(base(24),base(scale_8(24)),font-size);
+        }
+      }
+      &__desc{
+        font-family: $font-secondary;
+        color: $Oxford_Blue;
+        line-height: 1.37;
+        @include fluidx(base(21),base(scale_9(21)),font-size);
+        &--fz1{
+          @include fluidx(base(18),base(scale_10(18)),font-size);
+        }
+        .home__block__lienhe__card &{
+          color: #f2f2f2;
+          font-family: $font-primary-light;
+          @include fluidx(base(18),base(scale_10(18)),font-size);
+          line-height: 1.33;
+        }
+        .trainghiem__box1 &{
+          color: #2c383f;
+          @include fluidx(base(18),base(scale_10(18)),font-size);
+        }
+      }
+      &__formLeft{
+        background-color: $Oxford_Blue;
+        padding: 10px;
+      }
+      &__card{
+        box-shadow: 3px 3px 4px 0 rgba(104, 104, 104, 0.53);
+        background-image: linear-gradient(214deg, #2c383f 98%, #2c383f 1%);
+        &__title{
+          font-family: $font-secondary-semibold;
+          color: #eeeeee;
+          line-height: 0.93;
+          @include fluidx(base(27),base(scale_9(27)),font-size);
+        }
+        &__body{
+          @include fluidx(30px,25px,padding);
+        }
+      }
+    }
+    &__tracuu{
+      background-image: linear-gradient(45deg, #f4d65d 0%, #fe7700 80%);
+      & > div{
+        @include fluidx(200px,30px,padding-bottom);
+      }
+      &__bg{
+        @include media-breakpoint-down('s'){
+          background-image: none !important;
+        }
+      }
+    }
+    &__tintuc{
+      &__space{
+        @include fluidx(10px,8px,padding);
+      }
+      &__card{
+        border-radius: 5px;
+        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.16);
+        &__dm{
+          @include fluidx(base(14),base(scale_10(14)),font-size);
+          color: $Lightning_Yellow;
+          font-family: $font-secondary-semibold;
+        }
+        &__title{
+          @include fluidx(base(18),base(scale_10(18)),font-size);
+          font-family: $font-secondary-semibold;
+          margin-top: 10px;
+          margin-bottom: 9px;
+          a{
+            color: $Oxford_Blue;
+          }
+        }
+        &__time{
+          color: $Oxford_Blue;
+          font-family: $font-secondary;
+          @include fluidx(base(14),base(scale_10(14)),font-size);
+        }
+        &__readMore{
+          color: $Lightning_Yellow;
+          @include fluidx(base(14),base(scale_10(14)),font-size);
+        }
+      }
+      &__navImg{
+        @include fluidx(16px,15px,width);
+      }
+    }
+  }
+  &__block1{
+    background-image: linear-gradient(290deg, #2a4768 100%, #19263d 0%);
+    &__arrow{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 100px 0 0 100vw;
+      @include fluidx(80px,20px,border-top-width);
+      border-color: transparent transparent transparent #f5f9fd;
+    }
+    &__title1{
+      font-family: $font-primary-semibold;
+      @include fluidx(base(26),base(scale_9(26)),font-size);
+      color: #eeeeee;
+      @include media-breakpoint-up('s'){
+        line-height: 0.77;
+      }
+      span{
+        color: #ffaa00;
+        font-family: $font-primary-bold;
+        @include fluidx(base(44),base(scale_8(44)),font-size);
+      }
+    }
+    &__title2{
+      margin-bottom: 15px;
+      line-height: 0.7;
+      color: #fbb648;
+      font-family: $font-primary-semibold;
+      @include fluidx(base(24),base(scale_9(24)),font-size);
+    }
+    &__desc{
+      color: #aab3b6;
+      line-height: 1.29;
+      @include fluidx(base(17),base(scale_10(17)),font-size);
+      span{
+        font-family: $font-primary-bold;
+      }
+    }
+    &__boxImg{
+
+    }
+  }
+  &__block2{
+    background-color: #f5f9fd;
+    &__title{
+      font-family: $font-primary-semibold;
+      @include fluidx(base(30),base(scale_8(30)),font-size);
+      color: #2c383f;
+      @include media-breakpoint-up('s'){
+        line-height: 0.67;
+      }
+      span{
+        font-family: $font-primary-bold;
+        @include fluidx(base(60),base(scale_8(60)),font-size);
+        color: #ffa200;
+      }
+    }
+    &__desc{
+      @include fluidx(base(18),base(scale_10(18)),font-size);
+      line-height: 0.93;
+      color: #2c383f;
+    }
+    &__listStep{
+      &:before{
+        display: none;
+      }
+      &__item{
+
+      }
+      &__link{
+        .uk-active > &{
+          font-family: $font-primary-semibold;
+          &:before {
+            background-color: #ffc400;
+            background-image: url("../images/iconCheck-active.png");
+          }
+        }
+        border: none !important;
+        @include fluidx(base(20),base(scale_10(20)),font-size);
+        font-family: $font-primary-light;
+        color: #2c383f;
+        text-transform: inherit !important;
+        padding-left: 35px !important;
+        position: relative;
+        &:before{
+          display: inline-flex;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          background-color: transparent;
+          background-image: url("../images/iconCheck.png");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+    &__title1{
+      line-height: 1.38;
+      color: #2c383f;
+      font-family: $font-primary-bold;
+      @include fluidx(base(21),base(scale_9(21)),font-size);
+    }
+    &__btn{
+      @include fluidx(base(20),base(scale_9(20)),font-size);
+      color: #ffffff;
+      //box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.27);
+      //background-image: linear-gradient(272deg, #ff9100 97%, #ff5e00 4%);
+
+      box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.16);
+      background-color: #ff8800;
+    }
+  }
+  &__btn{
+    background-color: $Lightning_Yellow;
+    border-color: $Lightning_Yellow;
+    color: #fff;
+    text-transform: inherit;
+    font-family: $font-secondary;
+    @include fluidx(base(18),base(scale_10(18)),font-size);
+    &:hover{
+      color: #fff;
+    }
+    .home__block__lienhe__card &{
+      font-family: $font-secondary-semibold;
+      @include fluidx(base(21),base(scale_9(21)),font-size);
+    }
+    .home__block__tracuu &{
+      @include fluidx(base(24),base(scale_9(24)),font-size);
+      &:hover{
+        background-color: $Lightning_Yellow;
+        border-color: $Lightning_Yellow;
+      }
+    }
+  }
+  &__Input{
+    font-family: $font-secondary-italic;
+    @include fluidx(base(18),base(scale_10(18)),font-size);
+  }
+  &__number{
+    @include fluidx(base(45),base(scale_8(45)),font-size);
+    color: #f2f2f2;
+    font-family: $font-secondary-semibold;
+    line-height: 0.47;
+    @include media-breakpoint-down('xs'){
+      position: relative;
+      top: -6px;
+    }
+  }
+  &__label{
+    font-family: $font-secondary;
+    color: #f2f2f2;
+    margin: 0;
+    margin-top: 5px !important;
+    @include fluidx(base(16),base(scale_10(16)),font-size);
+  }
+  &__itemCountdown{
+    background-color: #182024;
+    padding: 5px 8px;
+    padding-top: 15px;
+  }
+}
+.thongke{
+  background-color: #f5f9fd;
+  &__boxImg{
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  &__number{
+    font-family: $font-secondary-bold;
+    color: #feaa02;
+    line-height: 1.2;
+    @include fluidx(base(36),base(scale_8(36)),font-size);
+  }
+  &__txt{
+    @include fluidx(base(14),base(scale_10(14)),font-size);
+    color: #5b5b5b;
+    line-height: 1.2;
+    font-family: $font-secondary-semibold;
+  }
+}
+.tracuu{
+  &__tab{
+    margin-bottom: 0;
+    &__item{
+
+    }
+    &__link{
+      text-transform: inherit !important;
+      background-color: #cbcbcb !important;
+      color: #3d3d3d;
+      font-family: $font-primary-light;
+      @include fluidx(base(18),base(scale_10(18)),font-size);
+      border-radius: 3px 3px 0 0;
+      .uk-active > &{
+        background-color: #fff !important;
+        color: #fe7700 !important;
+      }
+    }
+  }
+  &__card1{
+    box-shadow: 3px 3px 6px 0 rgba(81, 81, 81, 0.51);
+    background-color: #f9f9f9;
+    &__label{
+      line-height: 1.6;
+      color: #717171;
+      font-family: $font-secondary;
+      @include fluidx(base(18),base(scale_10(18)),font-size);
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    &__input{
+      font-family: $font-secondary;
+      color: #a8a8a8;
+      @include fluidx(base(16),base(scale_10(16)),font-size);
+      border: solid 1px #d1d1d1;
+      border-radius: 4px;
+    }
+    &__select{
+      border: solid 1px #d1d1d1;
+      font-family: $font-secondary;
+      text-align: left;
+      padding: 0 15px;
+      padding-right: 30px;
+      text-transform: inherit;
+      position: relative;
+      background-color: #fff;
+      @include fluidx(base(16),base(scale_10(16)),font-size);
+      color: #a8a8a8;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      .uk-icon{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.trainghiem{
+  &__bg{
+    //min-height: 1079px;
+    @include fluidx(1079px,900px,min-height);
+    @include media-breakpoint-down('xs'){
+      background-position: 77% 100%;
+    }
+  }
+  &__box1{
+    padding: 50px 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: #f3f1dd;
+    &__title{
+      line-height: 1.68;
+      @include fluidx(base(25),base(scale_9(25)),font-size);
+      font-family: $font-primary-bold;
+      color: #2c383f;
+    }
+  }
+}

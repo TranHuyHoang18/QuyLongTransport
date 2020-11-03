@@ -1,0 +1,64 @@
+.navTop{
+  &__right{
+    background-color: $oxford-blue;
+    .uk-navbar-nav{
+      >li{
+        position: relative;
+        >a{
+          text-transform: inherit;
+          color: #ffffff;
+          @include fluidx(base(24),14px,font-size);
+        }
+      }
+    }
+    &__boxImg{
+      @include fluidx(28px,25px,height);
+      img{
+
+      }
+    }
+    &__link{
+      &:after{
+        .uk-parent &{
+          width: 14px;
+          height: 14px;
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 5px;
+          @include media-breakpoint-up('m'){
+            right: 0;
+          }
+          transform: translateY(-50%);
+          background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' data-svg='triangle-down'%3E%3Cg color='%23fff'%3E%3Cpolygon fill='currentcolor' points='5 7 15 7 10 12'%3E%3C/polygon%3E%3C/g%3E%3C/svg%3E") !important;
+        }
+      }
+      &--logout{
+        @include fluidx(base(24),14px,font-size);
+      }
+    }
+  }
+  &__nav{
+    >li{
+      >a{
+        @extend .nav-minHeight;
+      }
+    }
+  }
+  &__navItem{
+    @extend .nav-minHeight;
+  }
+  &__left{
+    &__txt{
+      @include fluidx(base(21),14px,font-size);
+      color: #ffffff;
+      b{
+        @include fluidx(base(24),14px,font-size);
+        font-family: $font-primary-bold;
+      }
+    }
+    &__txt1{
+      color: $charcoal;
+    }
+  }
+}

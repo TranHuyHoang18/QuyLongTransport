@@ -46,6 +46,69 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+            'hash' => false,
+        ],
+        'qtv' => [
+            'driver' => 'session',
+            'provider' => 'qtvs',
+        ],
+        'qtv-api' => [
+            'driver' => 'token',
+            'provider' => 'qtvs',
+            'hash' => false,
+        ],
+        'nhanvien' => [
+            'driver' => 'session',
+            'provider' => 'nhanviens',
+        ],
+        'nhanvien-api' => [
+            'driver' => 'token',
+            'provider' => 'nhanviens',
+            'hash' => false,
+        ],
+        'quanly' => [
+            'driver' => 'session',
+            'provider' => 'quanlys',
+        ],
+        'quanly-api' => [
+            'driver' => 'token',
+            'provider' => 'quanlys',
+            'hash' => false,
+        ],
+        'ketoan' => [
+            'driver' => 'session',
+            'provider' => 'ketoans',
+        ],
+        'ketoan-api' => [
+            'driver' => 'token',
+            'provider' => 'ketoans',
+            'hash' => false,
+        ],
+        'nvkho' => [
+            'driver' => 'session',
+            'provider' => 'nvkhos',
+        ],
+        'nvkho-api' => [
+            'driver' => 'token',
+            'provider' => 'nvkhos',
+            'hash' => false,
+        ],
+        'taixe' => [
+            'driver' => 'session',
+            'provider' => 'taixes',
+        ],
+        'taixe-api' => [
+            'driver' => 'token',
+            'provider' => 'taixes',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -71,10 +134,34 @@ return [
             'model' => App\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\AdminModel::class,
+        ],
+        'qtvs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\QTVModel::class,
+        ],
+        'nhanviens' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\NhanVienModel::class,
+        ],
+        'quanlys' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\QuanlyModel::class,
+        ],
+        'ketoans' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\KeToanModel::class,
+        ],
+        'taixes' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\TaiXeModel::class,
+        ],
+        'nvkhos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\NVKhoModel::class,
+        ],
     ],
 
     /*
@@ -95,6 +182,48 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'qtvs' => [
+            'provider' => 'qtvs',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'nhanviens' => [
+            'provider' => 'nhanviens',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'quanlys' => [
+            'provider' => 'quanlys',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'ketoans' => [
+            'provider' => 'ketoans',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'taixes' => [
+            'provider' => 'taixes',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'nvkhos' => [
+            'provider' => 'nvkhos',
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
